@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(54, 54, 93);
+}
+section{
+    width: 80%;
+    margin: 4% 10% 0;
+    background-image: url(img/background-destination-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-bottom: 20px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+   position: relative;
+
+}
+header img{
+    margin-top: 5%;
+   margin-left: 5%;
+}
+header::after{
+    content: " ";
+    width: 350px;
+    height: 1px;
+    background-color: gray;
+    left: 13%;
+    top: 75%;
+    position: absolute;
+}
+.nav{
+    padding: 15px 20px 7px 19px;
+    width: 55%;
+    background-color: rgb(54, 54, 93);
+    margin-top: 5%;
+    z-index: 1;
+}
+.nav li{
+    display: inline;
+    margin: 0 18px ;
+    position: relative;
+}
+ul li a::after{
+    content: " ";
+    width: 100%;
+    height: 0;
+    position: absolute;
+     bottom: -20px;
+     background-color: white;
+     left: 0;
+     transition: 0.5s;
+}
+ul li a.active::after{
+    height: 3px;
+}
+ul li a{
+    text-decoration: none;
+    color: gray;
+  font-size: 12px;
+}
+ul li a span{
+    font-weight: bold;
+    margin-right: 5px;
+    color: white;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5% 10% 5%;
+}
+.left img{
+    height: 300px;
+    margin-top: 12%;
+}
+.left p{
+    color: gray;
+}
+.left p span{
+    color: white;
+    font-weight: bold;
+}
+ul li{
+    display: inline-block;
+    margin: 0 15px 0 0;
+    color: gray;
+}
+.right{
+    margin-left: 12%;
+    width: 45%;
+    margin-top: 7%;
+}
+.mars{
+    margin-top: 5%;
+    font-size: 90px;
+    font-family: serif;
+}
+.marsp{
+    padding-bottom: 10%;
+    border-bottom: 1px solid gray;
+    color: gray;
+}
+.feet{
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.fpar{
+    color: gray;
+    font-size: 14px;
+}
+.hpar{
+    margin-top: 3px;
+    font-size: 20px;
+}
+.current{
+    position: relative;
+}
+.current::after{
+    content: " ";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+#ham{
+    display: none;
+}
+#close{
+    display: none;
+}
+@media screen and (max-width:1115px) {
+    .nav{
+        padding: 15px 0 7px 10px;
+        width: 65%;
+    }
+    .nav li{
+            margin: 0 1%;
+    }
+    section{
+        width: 90%;
+        margin: 5%;
+    }
+    .nav li a{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width:1080px) {
+    section{
+        width: 90%;
+        margin: 5%;
+    }
+    main{
+        margin-top: 10%;
+    }
+    .left img{
+        width: 250px;
+        height: 250px;
+    }
+    .right{
+        margin-top: 1%;
+        width: 50%;
+    }
+    .mars{
+        font-size: 70px;
+    }
+    .marsp{
+        font-size: 13px;
+    }
+    ul li{
+        margin: 0 8px 0 0;
+    }
+    .fpar{
+        font-size: 12px;
+    }
+    .hpar{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:800px) {
+    section{
+        width: 100%;
+        background-image: url(img/background-destination-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        position: relative;
+    }
+    .nav{
+        display: none;
+        position: absolute;
+        height: 100vh;
+        margin-top: 0;
+        right: 0;
+    }
+    .hidden{
+        display: block;
+    }
+    .nav li{
+        display: block;
+        margin: 20% 5%;
+    }
+    .nav li a{
+        font-size: 17px;
+        
+    }
+    #ham{
+        display: block;
+        margin-right: 20px;
+        width: 39px;
+        height: 34px;
+        margin-top: 7%;
+        cursor: pointer;
+    }
+    header::after{
+        height: 0;
+    }
+    main{
+        display: block;
+        margin: 10% 5% 0;
+        width: 90%;
+    }
+    .left{
+        width: 100%;
+        text-align: center;
+    }
+    .para{
+        font-size: 15px;
+    }
+    .right{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+    ul li a::after{
+        bottom: -10px;
+        width: 170px;
+    }
+    #close{
+        display: block;
+        float: right;
+        width: 25px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .left img{
+        margin-top: 5%;
+    }
+    .marsp{
+        padding-bottom: 3%;
+        border-bottom: 1px solid gray;
+        color: gray;
+        font-size: 15px;
+    }
+    .feet{
+        display: block;
+        width: 100%;
+    }
+    .fright{
+        margin-top: 20px;
+    }
+    .fpar{
+        font-size: 12px;
+    }
+    .hpar{
+        font-size: 23px;
+    }
+}
