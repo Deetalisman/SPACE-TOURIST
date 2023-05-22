@@ -10,3 +10,5 @@ ham.addEventListener('click', () => {
 close.addEventListener('click', () => {
     nav.classList.toggle('hidden')
 });
+
+

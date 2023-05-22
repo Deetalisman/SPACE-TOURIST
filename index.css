@@ -7,8 +7,7 @@ body{
     background-color: rgb(54, 54, 93);
 }
 section{
-    width: 80%;
-    margin: 4% 10% 0;
+    width: 100%;
     background-image: url(img/background-home-desktop.jpg);
     background-position: center;
     background-size: cover;
@@ -16,6 +15,7 @@ section{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     padding-bottom: 30px;
+    height: 100vh;
 }
 header{
     display: flex;
@@ -29,17 +29,17 @@ header img{
 }
 header::after{
     content: " ";
-    width: 350px;
+    width: 32%;
     height: 1px;
     background-color: gray;
     left: 13%;
-    top: 75px;
+    top: 79%;
     position: absolute;
 }
 ul{
     padding: 15px 20px 7px 19px;
     width: 55%;
-    background-color: rgb(54, 54, 93);
+    background-color: rgba(105, 101, 101, 0.4);
     margin-top: 5%;
     z-index: 1;
 }
@@ -75,7 +75,7 @@ main{
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 15% 10% 5%;
+    margin: 13% 10% 5%;
 }
 .left{
     width: 40%;
@@ -114,53 +114,84 @@ main{
 #close{
     display: none;
 }
-@media screen and (max-width:1115px) {
+@media screen and (max-width:1000px) {
+    header img{
+        margin-top: 10px;
+        margin-left: 3%;
+    }
     ul{
-        padding: 15px 0 7px 10px;
-        width: 70%;
+        padding: 23px 0 7px 10px;
+        width: 55%;
+        margin-top: 0;
     }
     header::after{
-        top: 60px;
+        height: 0;
     }
     main{
-        margin-top: 10%;
+        display: block;
+        width: 80%;
+        margin: 10% auto;
+        text-align: center;
     }
     .one{
         font-size: 15px;
+        color: rgb(206, 206, 206);
+        font-family: Arial, 'Times New Roman', Times, serif;
+    }
+    .left{
+        text-align: center;
+        width: 100%;
     }
     .left h1{
-        font-size: 60px;
+        font-size: 100px;
         margin-top: 10px;
     }
     .para{
-        font-size: 12px;
+        font-size: 15px;
+        color: rgb(185, 183, 183);
+         width: 65%;
+         margin: 0 auto;
     }
     .right{
-        margin-top: 3%;
+        margin-top: 5%;
+        margin-left: 30%;
     }
     .right h1{
         background-color: white;
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
         border-radius: 50%;
-        padding-top: 40%;
+        padding-top: 110px;
         padding-left: 5px;
         color: gray;   
          letter-spacing: 3px;
+         font-size: 30px;
+         font-weight: 400;
     }
     section{
-        width: 90%;
-        margin: 10% 5% 0;
+        width: 100%;
         padding-bottom: 50px;
+        background-image: url(img/background-home-tablet.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     ul li{
         margin: 0 1%;
     }
     .nav li a{
-        font-size: 8px;
+        font-size: 13px;
+        color: white;
+        margin: 5px 10px 0;
+    }
+    .nav li a span{
+        display: none;
+    }
+    ul li a::after{
+        bottom: -22px;
     }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px) {
     section{
         width: 100%;
         background-image: url(img/background-home-mobile.jpg);
@@ -170,12 +201,16 @@ main{
         margin: 0;
         position: relative;
     }
+    header img{
+        margin-top: 5%;
+    }
     .nav{
         display: none;
         position: absolute;
         height: 100vh;
         margin-top: 0;
         right: 0;
+        background-color: rgb(54, 54, 93);
     }
     .hidden{
         display: block;
@@ -201,28 +236,30 @@ main{
     }
     main{
         display: block;
-        margin: 18% 5% 0;
+        margin: 18% 5%;
         width: 90%;
     }
     .left{
         width: 100%;
         text-align: center;
     }
+    .left h1{
+        font-size: 60px
+    }
     .para{
         font-size: 15px;
+        width: 80%;
     }
     .right{
-        width: 100%;
-        margin-top: 20%;
-        padding-left: 10%;
+        margin-top: 17%;
+        align-content: center;
     }
     .right h1{
-        width: 300px;
-        height: 300px;
-        letter-spacing: 22px;
-        padding-top: 43%;
-        padding-left: 13px;
+        width: 250px;
+        height: 250px;
+        letter-spacing: 13px;
         font-size: 30px;
+        padding-top: 110px;
     }
     ul li a::after{
         bottom: -10px;
@@ -234,5 +271,10 @@ main{
         width: 25px;
         margin-right: 20px;
         cursor: pointer;
+    }
+}
+@media screen and (max-width:450px) {
+    .right{
+        margin-left: 18%;
     }
 }

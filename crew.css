@@ -7,14 +7,14 @@ body{
     background-color: rgb(54, 54, 93);
 }
 section{
-    width: 80%;
-    margin: 2% 10% 0;
+    width: 100%;
     background-image: url(img/background-destination-desktop.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    height: auto;
 }
 header{
     display: flex;
@@ -28,17 +28,17 @@ header img{
 }
 header::after{
     content: " ";
-    width: 350px;
+    width: 32%;
     height: 1px;
     background-color: gray;
     left: 13%;
-    top: 70%;
+    top: 79%;
     position: absolute;
 }
 .nav{
     padding: 15px 20px 7px 19px;
     width: 55%;
-    background-color: rgb(54, 54, 93);
+    background-color: rgba(105, 101, 101, 0.4);
     margin-top: 5%;
     z-index: 1;
 }
@@ -71,41 +71,38 @@ ul li a span{
     color: white;
     margin-right: 6px;
 }
-main{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 5% 10% 3%;
-}
-.left p span{
-    color:white;
+.pars span{
+    color:gray;
     font-weight: bold;
     margin-right: 5px;
 }
 .pars{
-    color: gray;
+    color: white;
+    margin: 5% 10% 0;
 }
 .right{
     margin-left: 12%;
     width: 45%;
-    margin-top: 4%;
 }
 .one{
-    margin-top: 35%;
+    margin-top: 10%;
     color: gray;
     font-size: 20px;
 }
 .two{
-    font-size: 23px;
+    font-size: 40px;
     margin-top: 10px;
     color: white;
+    letter-spacing: 8px;
 }
 .three{
     color: gray;
     margin-top: 20px;
+    width: 60%;
 }
 .right img{
     height: 400px;
+
 }
 #ham{
     display: none;
@@ -113,34 +110,106 @@ main{
 #close{
     display: none;
 }
-@media screen and (max-width:1115px) {
+nav{
+    position: relative;
+}
+.slider{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 1% 10% 3%;
+    flex: 1 0 80%;
+    scroll-snap-align: 3%;
+    margin: 5% 10% 3%;
+}
+.slider-nav{
+    position: absolute;
+    display: flex;
+    column-gap: 1rem;
+    bottom: 5em;
+    left: 13%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: gray;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+    opacity: 1;
+}
+#nav-1{
+    background-color: white;
+}
+
+@media screen and (max-width:1000px) {
     section{
-        width: 90%;
-        margin: 5%;
+        width: 100%;
+        background-image: url(img/background-crew-tablet.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    header::after{
+        height: 0;
+    }
+    header img{
+        margin-top: 0;
     }
     .nav{
-        padding: 15px 0 7px 10px;
-        width: 65%;
-    }
-    .nav li{
-            margin: 0 1%;
+        margin-top: 0;
+        padding: 23px 0 7px 10px;
+        width: 55%;
+        height: 60px;
     }
     .nav li a{
-        font-size: 10px;
+        color: white;
+        font-size: 13px;
+        margin: 5px 5px 0;
+    }
+    .nav li a span{
+        display: none;
+    }
+    main{
+        display: block;
+    }
+    .left{
+        text-align: center;
+    }
+    .one{
+        margin-top: 2%;
+    }
+    .three{
+        width: 80%;
+        margin: 20px auto;
     }
     .right img{
-        height: 400px;
-        width: 320px;
-        margin-right: 10px;
+    margin-top: 6%;
+        margin-left: 25%;
     }
-    section{
-        margin-top: 6%;
+    .slider-nav{
+        top: 230px;
+        left: 50%;
     }
-    .nav li a{
-        font-size:8px;
+    ul li a::after{
+        bottom: -22px;
+    }
+    .nav li{
+        display: inline;
+        margin: 0 7px ;
     }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px) {
     section{
         width: 100%;
         background-image: url(img/background-crew-mobile.jpg);
@@ -151,12 +220,17 @@ main{
         position: relative;
         height: 100vh;
     }
+    header img{
+        margin-top: 5%;
+    }
     .nav{
         display: none;
         position: absolute;
         height: 100vh;
         margin-top: 0;
         right: 0;
+        background-color: rgb(54, 54, 93);
+        z-index: 2;
     }
     .hidden{
         display: block;
@@ -169,13 +243,20 @@ main{
         font-size: 17px;
         
     }
+    .slider-nav{
+        top: 410px;
+        left: 48%;
+    }
     #ham{
         display: block;
         margin-right: 20px;
         width: 39px;
         height: 34px;
-        margin-top: 7%;
+        margin-top: 5%;
         cursor: pointer;
+    }
+    .right{
+        width: 100%;
     }
     header::after{
         height: 0;
@@ -185,6 +266,8 @@ main{
         margin: 10% 5% 0;
         flex-direction:column-reverse;
         width: 90%;
+         flex: 1 0 90%;
+
     }
     .left{
         width: 100%;
@@ -231,7 +314,32 @@ main{
     .right img{
         height: 338px;
         margin: 0;
-        margin-left: 30px;
+        margin-left: 25%;
+    }
+    .three{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:542px) {
+    .right img{
+        height: 338px;
+        margin: 0;
+        margin-left: 17%;
+    }
+    .two{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .right img{
+        height: 338px;
+        margin: 0;
+        margin-left: 10%;
+    }
+    .two{
+        font-size: 20px;
     }
 }
 

@@ -7,21 +7,20 @@ body{
     background-color: rgb(54, 54, 93);
 }
 section{
-    width: 80%;
-    margin: 2% 10% 0;
+    width: 100%;
     background-image: url(img/background-destination-desktop.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    padding-bottom: 5px;
+    height: 100vh;
+    margin: 0;
 }
 header{
     display: flex;
     justify-content: space-between;
    position: relative;
-
 }
 header img{
     margin-top: 5%;
@@ -29,17 +28,40 @@ header img{
 }
 header::after{
     content: " ";
-    width: 350px;
+    width:32%;
     height: 1px;
     background-color: gray;
     left: 13%;
-    top: 70%;
+    top: 79%;
     position: absolute;
+}
+nav{
+    display: flex;
+}
+.nav-bar{
+    margin-left: 12%;
+    margin-top: 7%;
+    text-align: center;
+    display: block;
+}
+.nav-bar p{
+    margin-top: 5%;
+    width: 70px;
+    height: 70px;
+    padding-top: 25%;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+}
+.current{
+    background-color: white;
+    color: black;
 }
 .nav{
     padding: 15px 20px 7px 19px;
     width: 55%;
-    background-color: rgb(54, 54, 93);
+    background-color: rgba(105, 101, 101, 0.4);
     margin-top: 5%;
     z-index: 1;
 }
@@ -72,40 +94,40 @@ ul li a span{
     color: white;
     margin-right: 6px;
 }
-main{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 5% 0 5% 10%;
-}
-.left p span{
+.pars span{
     color: gray;
     font-weight: bold;
+}
+.pars{
+    font-size: 20px;
+    margin: 5% 0 0 13% ;
 }
 .right{
     margin-top: 4%;
 }
 .left{
-    width: 30%;
+    width: 50%;
+    margin-top: 5%;
 }
 .one{
-    margin-top: 25%;
+    margin-top: 10%;
     color: gray;
-    font-size: 12px;
+    font-size: 15px;
 }
 .two{
-    font-size: 30px;
+    font-size: 40px;
     margin-top: 10px;
+    letter-spacing: 5px;
 }
 .three{
     color: gray;
     margin-top: 20px;
+    font-size: 18px;
+    width: 80%;
 }
-.right{
-    width: 50%;
-}
+
 .right img{
-    height: 350px;
+    height: 420px;
     width: 100%;
     border-radius: 10px;
 }
@@ -115,38 +137,75 @@ main{
 #close{
     display: none;
 }
-@media screen and (max-width:1115px) {
+main{
+    display: flex;
+    width: 90%;
+    margin: 2px 0 0 5%;
+}
+@media screen and (max-width:1000px) {
     section{
-        width: 90%;
-        margin: 5%;
+        width: 100%;
+        background-image: url(img/background-technology-tablet.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+    }
+    header img{
+        margin-top: 0;
+        margin-left: 3%;
     }
     .nav{
-        padding: 15px 0 7px 10px;
-        width: 65%;
+        padding: 23px 0 7px 10px;
+        width: 55%;
+        margin-top: 0;
+        height: 60px;
     }
     .nav li{
-            margin: 0 1%;
-    }
-    .left{
-        width: 40%;
-    }
-    .right{
-       width: 49%;
-    }
-    .two{
-        font-size: 25px;
-    }
-    .three{
-        font-size: 15px;
-    }
-    section{
-        margin-top: 6%;
+        margin: 0 5px;
     }
     .nav li a{
-        font-size: 8px;
+        color: white;
+        font-size: 13px;
+        margin: 5px 5px 0;
+
+    }
+    .nav li a span{
+        display: none;
+    }
+    header::after{
+        height: 0;
+    }
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 0;
+    }
+    .nav-bar{
+        margin-left: 5%;
+        margin-top: 590px;
+        position: absolute;
+    }
+    nav{
+        position: relative;
+    }
+    .pars{
+        font-size: 20px;
+        margin: 5% 0 0 7% ;
+    }
+    
+    .right img{
+        height: 500px;
+        border-radius: 0;
+    }
+    .left{
+        margin-left: 20%;
+        width: 80%;
+        padding-bottom: 30px;
     }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px) {
     section{
         width: 100%;
         background-image: url(img/background-technology-mobile.jpg);
@@ -155,14 +214,25 @@ main{
         background-repeat: no-repeat;
         margin: 0;
         position: relative;
-        height: 100vh;
+        height: auto;
+    }
+    header img{
+        margin-top: 5%;
+        margin-left: 3%;
     }
     .nav{
         display: none;
         position: absolute;
         height: 100vh;
         margin-top: 0;
+        background-color: rgb(54, 54, 93);
+
         right: 0;
+    }
+    .nav-bar{
+        margin-left: 1%;
+        margin-top: 420px;
+        position: absolute;
     }
     .hidden{
         display: block;
@@ -193,19 +263,24 @@ main{
         width: 100%;
     }
     .left{
-        width: 100%;
-        text-align: center;
-        padding: 0 6%;
+        text-align: left;
+        padding: 0 2%;
         margin-top: 7%;
+            margin-left: 19%;
+            width: 81%;
+            padding-bottom: 30px;
     }
     .one{
         margin-top: 10%;
     }
     .two{
-        font-size: 30px;
+        font-size: 26px;
+    }
+    .three{
+        font-size: 17px;
     }
     .para{
-        font-size: 13px;
+        font-size:10px;
     }
     .right{
         width: 100%;
@@ -240,4 +315,5 @@ main{
         color: gray;
         font-size: 15px;
     }
+    
 }

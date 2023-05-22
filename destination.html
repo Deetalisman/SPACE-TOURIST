@@ -22,15 +22,15 @@
         </header>
         <main>
             <div class="left">
-               <p><span>01</span> PICK YOUR DESTINATION</p>
-               <img src="img/image-mars.png" alt="">
+               <p class="pars"><span>01</span> PICK YOUR DESTINATION</p>
+               <img src="img/image-mars.png" id="dest-img">
             </div>
             <div class="right">
                 <ul>
-                    <li>MOON</li>
-                    <li class="current">MARS</li>
-                    <li>EUROPA</li>
-                    <li>TITAN</li>
+                    <li id="moon">MOON</li>
+                    <li id="mars" class="current">MARS</li>
+                    <li id="europa">EUROPA</li>
+                    <li id="titan">TITAN</li>
                 </ul>
                 <h1 class="mars">MARS</h1>
                 <p class="marsp">Don't forget to pack your hiking boots.You'll
@@ -41,16 +41,17 @@
                 <div class="feet">
                     <div class="fleft">
                         <p class="fpar">AUG. DISTANCE</p>
-                        <p class="hpar">225 MIL. KM</p>
+                        <p class="hpar" id="dist">225 MIL. KM</p>
                     </div>
                     <div class="fright">
                         <p class="fpar">EST. TRAVEL TIME</p>
-                        <p class="hpar">9 MONTHS</p>
+                        <p class="hpar" id="time">9 MONTHS</p>
                     </div>
                 </div>
             </div>
         </main>
     </section>
+    <script src="./dest.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>

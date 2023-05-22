@@ -7,8 +7,7 @@ body{
     background-color: rgb(54, 54, 93);
 }
 section{
-    width: 80%;
-    margin: 4% 10% 0;
+    width: 100%;
     background-image: url(img/background-destination-desktop.jpg);
     background-position: center;
     background-size: cover;
@@ -16,6 +15,7 @@ section{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     padding-bottom: 20px;
+    height: 100vh;
 }
 header{
     display: flex;
@@ -29,17 +29,17 @@ header img{
 }
 header::after{
     content: " ";
-    width: 350px;
+    width: 32%;
     height: 1px;
     background-color: gray;
     left: 13%;
-    top: 75%;
+    top: 79%;
     position: absolute;
 }
 .nav{
     padding: 15px 20px 7px 19px;
     width: 55%;
-    background-color: rgb(54, 54, 93);
+    background-color: rgba(105, 101, 101, 0.4);
     margin-top: 5%;
     z-index: 1;
 }
@@ -82,16 +82,17 @@ main{
     margin-top: 12%;
 }
 .left p{
-    color: gray;
+    color:white;
 }
 .left p span{
-    color: white;
+    color: gray;
     font-weight: bold;
 }
 ul li{
     display: inline-block;
     margin: 0 15px 0 0;
     color: gray;
+    cursor: pointer;
 }
 .right{
     margin-left: 12%;
@@ -104,12 +105,13 @@ ul li{
     font-family: serif;
 }
 .marsp{
-    padding-bottom: 10%;
+    padding-bottom: 5%;
     border-bottom: 1px solid gray;
     color: gray;
+    width: 80%;
 }
 .feet{
-    width: 90%;
+    width: 80%;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -140,27 +142,69 @@ ul li{
 #close{
     display: none;
 }
-@media screen and (max-width:1115px) {
+@media screen and (max-width:1000px) {
     .nav{
-        padding: 15px 0 7px 10px;
-        width: 65%;
+        padding: 23px 0 7px 10px;
+        width: 55%;
+        margin-top: 0;
     }
     .nav li{
             margin: 0 1%;
     }
     section{
-        width: 90%;
-        margin: 5%;
+        width: 100%;
+        background-image: url(img/background-destination-tablet.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
     }
     .nav li a{
-        font-size: 8px;
+        font-size: 12px;
+        color: white;
+        margin: 5px 10px 0;
+
+    }
+    .nav li a span{
+        display: none;
+    }
+    header::after{
+        height: 0;
+    }
+    header img{
+        margin-top: 10px;
+        margin-left: 3%;
+    }
+    main{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .pars{
+        text-align: left;
+    }
+    .left img{
+        margin-top: 20px;
+        width: 500px;
+        height: 500px;
+        margin-bottom: 5%;
+    }
+    .right{
+        margin: 0 auto;
+        width: 70%;
+        text-align: center;
+    }
+    .marsp{
+        width: 100%;
+        font-size: 15px;
+    }
+    .feet{
+        width: 100%;
     }
 }
 @media screen and (max-width:1080px) {
-    section{
-        width: 90%;
-        margin: 5%;
-    }
+   
     main{
         margin-top: 10%;
     }
@@ -168,15 +212,8 @@ ul li{
         width: 250px;
         height: 250px;
     }
-    .right{
-        margin-top: 1%;
-        width: 50%;
-    }
     .mars{
-        font-size: 70px;
-    }
-    .marsp{
-        font-size: 13px;
+        font-size: 100px;
     }
     ul li{
         margin: 0 8px 0 0;
@@ -188,7 +225,7 @@ ul li{
         font-size: 18px;
     }
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:700px) {
     section{
         width: 100%;
         background-image: url(img/background-destination-mobile.jpg);
@@ -198,12 +235,17 @@ ul li{
         margin: 0;
         position: relative;
     }
+    header img{
+        margin-top: 4%;
+    }
     .nav{
         display: none;
         position: absolute;
         height: 100vh;
         margin-top: 0;
         right: 0;
+        background-color: rgb(54, 54, 93);
+        
     }
     .hidden{
         display: block;
@@ -221,11 +263,14 @@ ul li{
         margin-right: 20px;
         width: 39px;
         height: 34px;
-        margin-top: 7%;
+        margin-top: 5%;
         cursor: pointer;
     }
     header::after{
         height: 0;
+    }
+    .mars{
+        font-size: 70px;
     }
     main{
         display: block;
